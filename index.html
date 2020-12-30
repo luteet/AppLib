@@ -26,8 +26,891 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+    <div class="wrapper">
+        <header class="header top">
+            <div class="header__container container">
+                <div class="header__logo logo">
+                    <a href="/" class="header__logo-link logo-link" aria-label="Логотип">
+                        <img src="img/logo.svg" loading="lazy" alt="Логотип" class="header__logo-img logo-img">
+                    </a>
+                </div>
+                <button class="header__burger burger" aria-label="Menu open and close toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="header__nav">
+                    <ul class="header__nav--list">
+                        <li>
+                            <a href="#" class="header__nav--link link-hover btn-scroll">Основные функции</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav--link link-hover btn-scroll">Цены</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav--link link-hover btn-scroll">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav--link link-hover btn-scroll">FAQ</a>
+                        </li>
+                        <li class="last-li btn-body">
+                            <a href="#" class="header__nav--link btn btn-scroll"><span>Попробовать</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="intro" style="background-image: url(img/intro/bg-city.svg)">
+            <div class="intro__scene parallax-scene">
+                <div data-depth="0.15" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 25s linear 0s infinite alternate forwards">
+                    <img src="img/parallax-lib/circle-big.svg" class="parallax-scene__item-img" style="width: 18px; left: 4%; top: 20%;" loading="lazy" alt="">
+                </div>
+                <div data-depth="0.02" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 30s linear 0s infinite alternate forwards">
+                    <img src="img/parallax-lib/square.svg" class="parallax-scene__item-img" style="width: 21px; left: 35%; top: 35%; transform: rotate(35deg);" loading="lazy" alt="">
+                </div>
+                <div data-depth="0.07" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 23s linear 0s infinite alternate-reverse forwards">
+                    <img src="img/parallax-lib/circle-light-colored.svg" class="parallax-scene__item-img" style="width: 16px; left: 85%; top: 15%; transform: rotate(35deg);" loading="lazy" alt="">
+                </div>
+                <div data-depth="0.11" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 28s linear 0s infinite alternate-reverse forwards">
+                    <img src="img/parallax-lib/circle-light-colored.svg" class="parallax-scene__item-img" style="width: 17px; left: 35%; top: 90%; transform: rotate(35deg);" loading="lazy" alt="">
+                </div>
+                <div data-depth="0.02" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 21s linear 0s infinite alternate forwards">
+                    <img src="img/parallax-lib/plus.svg" class="parallax-scene__item-img" style="width: 17px; left: 55%; top: 60%; transform: rotate(0deg);" loading="lazy" alt="">
+                </div>
+                <div data-depth="0.05" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 27s linear 0s infinite alternate forwards">
+                    <img src="img/parallax-lib/circle-light-colored.svg" class="parallax-scene__item-img" style="width: 19px; left: 70%; top: 75%; transform: rotate(35deg);" loading="lazy" alt="">
+                </div>
+                <div data-depth="0.05" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 20s linear 0s infinite alternate-reverse forwards">
+                    <img src="img/parallax-lib/X.svg" class="parallax-scene__item-img" style="width: 17px; left: 20%; top: 55%; transform: rotate(35deg);" loading="lazy" alt="">
+                </div>
+            </div>
+            <div class="intro__container container flex-container">
+                <div class="intro__content">
+                    <h1 class="intro__title main-title">
+                        Лучшее приложение в вашей жизни
+                    </h1>
+                    <p>Повысьте продуктивность с помощью простого приложения для дел. приложение для управление личным бюджетом.</p>
+                    <div class="intro__links">
+                        <div class="intro__links--btn-body btn-body">
+                            <a href="#" class="intro__links--btn btn"><span>Попробовать</span></a>
+                        </div>
+                        <a href="#" class="intro__links--link link-accent link-hover"><span>Попробовать</span></a>
+                    </div>
+                </div>
+                <div class="intro__image">
+                    <img src="img/intro/intro-image.svg" width="100%" loading="lazy" alt="" class="intro__image--img">
+                </div>
+            </div>
+        </div>
+        <section class="companies section-padding">
+            <div class="companies__container container">
+                <h2 class="companies__title ">
+                    Нам доверяют такие компании, как
+                </h2>
+                <ul class="companies__list">
+                    <li>
+                        <a href="#" class="companies__link">
+                            <img src="img/companies/item-1.svg" loading="lazy" alt="" class="companies__link--img">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="companies__link">
+                            <img src="img/companies/item-1.svg" loading="lazy" alt="" class="companies__link--img">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="companies__link">
+                            <img src="img/companies/item-1.svg" loading="lazy" alt="" class="companies__link--img">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="companies__link">
+                            <img src="img/companies/item-1.svg" loading="lazy" alt="" class="companies__link--img">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="companies__link">
+                            <img src="img/companies/item-1.svg" loading="lazy" alt="" class="companies__link--img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="awesome section-padding">
+            <div class="awesome__container container flex-container _row-to-column">
+                <div class="awesome__image flex-block">
+                    <div class="awesome__image--bg">
+                        <img src="img/awesome/smartphone-bg.svg" loading="lazy" alt="" class="awesome__image--bg-img">
+                    </div>
+                    <div class="awesome__image--item">
+                        <img src="img/awesome/smartphone.svg" loading="lazy" alt="" class="awesome__image--item-img">
+                    </div>
+                </div>
+                <div class="awesome__content">
+                    <h2 class="awesome__title title">
+                        Отличные приложения функции
+                    </h2>
+                    <p>Повысьте продуктивность с помощью простого приложения для дел. приложение для управление личным бюджетом.</p>
+                    <ul class="awesome__list section-list _column">
+                        <li class="awesome__list--item awesome__item list-item _center">
+                            <div class="awesome__item--icon">
+                                <img src="img/awesome/icon-speed.svg" loading="lazy" alt="" class="awesome__item--icon-img">
+                            </div>
+                            <div class="awesome__item--content">
+                                <h3 class="awesome__item--title list-item-title min-title red-color">
+                                    Быстрая производительность
+                                </h3>
+                                <p class="awesome__item--text">
+                                    Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="awesome__list--item awesome__item list-item _center">
+                            <div class="awesome__item--icon">
+                                <img src="img/awesome/icon-prototyping.svg" loading="lazy" alt="" class="awesome__item--icon-img">
+                            </div>
+                            <div class="awesome__item--content">
+                                <h3 class="awesome__item--title list-item-title min-title blue-color">
+                                    Прототипирование
+                                </h3>
+                                <p class="awesome__item--text">
+                                    Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="awesome__list--item awesome__item list-item _center">
+                            <div class="awesome__item--icon">
+                                <img src="img/awesome/icon-vector.svg" loading="lazy" alt="" class="awesome__item--icon-img">
+                            </div>
+                            <div class="awesome__item--content">
+                                <h3 class="awesome__item--title list-item-title min-title green-color">
+                                    Редактирование векторов
+                                </h3>
+                                <p class="awesome__item--text">
+                                    Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="advantages section-padding">
+            <div class="advantages__container container">
+                <h2 class="advantages__title title">
+                    Умные джекпоты, которые ты можешь любить это в любое время в любом месте
+                </h2>
+                <p class="advantages__text">
+                    Рост мобильных устройств меняет то, как мы потребляют информацию целиком и больше всего в мире возвышенные каналы, такие как Facebook.
+                </p>
+                <ul class="advantages__list section-list">
+                    <li class="advantages__list--item advantages__item list-item _column">
+                        <div class="advantages__item--icon list-icon">
+                            <img src="img/advantages/icon-console.svg" loading="lazy" alt="" class="advantages__item--icon-img">
+                        </div>
+                        <div class="advantages__item--content">
+                            <h3 class="advantages__item--title list-item-title min-title red-color">
+                                Автоматические выплаты
+                            </h3>
+                            <p class="advantages__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="advantages__list--item advantages__item list-item _column">
+                        <div class="advantages__item--icon list-icon">
+                            <img src="img/advantages/icon-network.svg" loading="lazy" alt="" class="advantages__item--icon-img">
+                        </div>
+                        <div class="advantages__item--content">
+                            <h3 class="advantages__item--title list-item-title min-title blue-color">
+                                Сетевой эффект
+                            </h3>
+                            <p class="advantages__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="advantages__list--item advantages__item list-item _column">
+                        <div class="advantages__item--icon list-icon">
+                            <img src="img/advantages/icon-like.svg" loading="lazy" alt="" class="advantages__item--icon-img">
+                        </div>
+                        <div class="advantages__item--content">
+                            <h3 class="advantages__item--title list-item-title min-title green-color">
+                                Метод большего вознаграждения
+                            </h3>
+                            <p class="advantages__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="designed section-padding">
+            <div class="designed__container container flex-container _row-to-column">
+                <div class="designed__content flex-block">
+                    <h2 class="designed__title title">
+                        Разработано и построено последний код интеграция
+                    </h2>
+                    <p class="designed__text">
+                        Рост мобильных устройств меняет то, как мы потребляют информацию целиком и больше всего в мире возвышенные каналы, такие как Facebook.
+                    </p>
+                    <div class="designed__link-body btn-body">
+                        <a href="#" class="designed__link btn">
+                            Узнать больше
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="designed__image flex-block section-image">
+                <img src="img/designed-built/designed-built-image.svg" loading="lazy" alt="" class="designed__image--img">
+            </div>
+        </section>
+        <section class="causes section-padding">
+            <div class="causes__container container">
+                <div class="causes__info _info-center">
+                    <h2 class="causes__title title">
+                        Почему вам стоит выбрать наше приложение
+                    </h2>
+                    <p class="causes__text">
+                        Рост числа мобильных устройств полностью меняет способ потребления информации и самые популярные каналы мира, такие как Facebook.
+                    </p>
+                </div>
+                <ul class="causes__list section-list">
+                    <li class="causes__list--item causes__item list-item _column _center">
+                        <div class="causes__item--icon list-icon">
+                            <img src="img/causes/icon-list.svg" loading="lazy" alt="" class="causes__item--icon-img">
+                        </div>
+                        <div class="causes__item--content">
+                            <h3 class="causes__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="causes__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="causes__list--item causes__item list-item _column _center">
+                        <div class="causes__item--icon list-icon">
+                            <img src="img/causes/icon-cup.svg" loading="lazy" alt="" class="causes__item--icon-img">
+                        </div>
+                        <div class="causes__item--content">
+                            <h3 class="causes__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="causes__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="causes__list--item causes__item list-item _column _center">
+                        <div class="causes__item--icon list-icon">
+                            <img src="img/causes/icon-storage.svg" loading="lazy" alt="" class="causes__item--icon-img">
+                        </div>
+                        <div class="causes__item--content">
+                            <h3 class="causes__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="causes__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="causes__list--item causes__item list-item _column _center">
+                        <div class="causes__item--icon list-icon">
+                            <img src="img/causes/icon-tools.svg" loading="lazy" alt="" class="causes__item--icon-img">
+                        </div>
+                        <div class="causes__item--content">
+                            <h3 class="causes__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="causes__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="causes__list--item causes__item list-item _column _center">
+                        <div class="causes__item--icon list-icon">
+                            <img src="img/causes/icon-ux.svg" loading="lazy" alt="" class="causes__item--icon-img">
+                        </div>
+                        <div class="causes__item--content">
+                            <h3 class="causes__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="causes__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="causes__list--item causes__item list-item _column _center">
+                        <div class="causes__item--icon list-icon">
+                            <img src="img/causes/icon-support.svg" loading="lazy" alt="" class="causes__item--icon-img">
+                        </div>
+                        <div class="causes__item--content">
+                            <h3 class="causes__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="causes__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- <section class="features section-padding">
+            <div class="features__container container flex-container">
+                <div class="features__info">
+                    <h2 class="features__title title">
+                        Окончательные возможности что мы построили
+                    </h2>
+                    <p class="features__text">
+                        Рост мобильных устройств меняет то, как мы полностью потребляют информацию.
+                    </p>
+                </div>
+                <ul class="features__list section-list">
+                    <li class="features__list--item features__item list-item _column">
+                        <div class="features__item--icon list-icon">
+                            <img src="img/causes/icon-list.svg" loading="lazy" alt="" class="features__item--icon-img">
+                        </div>
+                        <div class="features__item--content">
+                            <h3 class="features__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="features__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="features__list--item features__item list-item _column">
+                        <div class="features__item--icon list-icon">
+                            <img src="img/causes/icon-list.svg" loading="lazy" alt="" class="features__item--icon-img">
+                        </div>
+                        <div class="features__item--content">
+                            <h3 class="features__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="features__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="features__list--item features__item list-item _column">
+                        <div class="features__item--icon list-icon">
+                            <img src="img/causes/icon-list.svg" loading="lazy" alt="" class="features__item--icon-img">
+                        </div>
+                        <div class="features__item--content">
+                            <h3 class="features__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="features__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="features__list--item features__item list-item _column">
+                        <div class="features__item--icon list-icon">
+                            <img src="img/causes/icon-list.svg" loading="lazy" alt="" class="features__item--icon-img">
+                        </div>
+                        <div class="features__item--content">
+                            <h3 class="features__item--title list-item-title min-title">
+                                Разработка приложений
+                            </h3>
+                            <p class="features__item--text">
+                                Сдайте анализы крови в дома собрать образец из новости ваши анализы крови.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="features__link-body btn-body">
+                    <a href="#" class="features__link btn">
+                        Узнать больше
+                    </a>
+                </div>
+            </div>
+            <div class="features__image section-image">
+                <div class="features__image--bg">
+                    <img src="img/features/bg-features.svg" loading="lazy" alt="" class="features__image--bg-img">
+                </div>
+                <div class="features__image--item">
+                    <img src="img/features/image-features.svg" loading="lazy" alt="" class="features__image--item-img">
+                </div>
+            </div>
+        </section> -->
+        <section class="subscriptions section-padding">
+            <div class="subscriptions__container container">
+                <div class="subscriptions__info _info-center">
+                    <h2 class="subscriptions__title title">
+                        Получите потрясающие функции без дополнительные сборы
+                    </h2>
+                    <p class="subscriptions__text">
+                        Рост мобильных устройств полностью меняет способ потребления информации и самые популярные каналы мира, такие как Facebook.
+                    </p>
+                </div>
+                <div class="subscriptions__tabs">
+                    <div class="subscriptions__tabs--buttons">
+                        <a href="#tab-1" class="subscriptions__tabs--btn">
+                            Ежемесячно
+                        </a>
+                        <a href="#tab-2" class="subscriptions__tabs--btn">
+                            Ежегодно
+                        </a>
+                        <div class="subscriptions__tabs--btn-bg"></div>
+                    </div>
+                    <div class="subscriptions__tabs--tab subscriptions__tab" id="tab-1">
+                        <ul class="subscriptions__list">
+                            <li class="subscriptions__tab--card subscriptions__card card">
+                                <div class="subscriptions__card--descr">
+                                    <span class="subscriptions__card--price main-title" data-currency="$" data-period="/в месяц">
+                                        0
+                                    </span>
+                                    <h3 class="subscriptions__card--title min-title">
+                                        Бизнес-класс
+                                    </h3>
+                                    <p class="subscriptions__card--for">
+                                        Для небольших команд или офиса
+                                    </p>
+                                </div>
+                                <ul class="subscriptions__card--list">
+                                    <li class="subscriptions__card--list-li">
+                                        Конструктор перетаскивания
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        1000 шаблонов
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Инструменты поддержки блога
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Интернет-магазин
+                                    </li>
+                                </ul>
+                                <div class="subscriptions__card--btn-body btn-body">
+                                    <a href="#" class="subscriptions__card--btn btn">
+                                        Оформить подписку
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="subscriptions__tab--card subscriptions__card card">
+                                <div class="subscriptions__card--descr">
+                                    <span class="subscriptions__card--price main-title" data-currency="$" data-period="/в месяц">
+                                        99
+                                    </span>
+                                    <h3 class="subscriptions__card--title min-title">
+                                        Профессиональный мастер
+                                    </h3>
+                                    <p class="subscriptions__card--for">
+                                        Для лучших возможностей
+                                    </p>
+                                </div>
+                                <ul class="subscriptions__card--list">
+                                    <li class="subscriptions__card--list-li">
+                                        Конструктор перетаскивания
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        1000 шаблонов
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Инструменты поддержки блога
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Интернет-магазин
+                                    </li>
+                                </ul>
+                                <div class="subscriptions__card--btn-body btn-body">
+                                    <a href="#" class="subscriptions__card--btn btn">
+                                        оформить подписку
+                                    </a>
+                                </div>
+                                <a href="#" class="subscriptions__card--btn-link link-accent link-hover"><span>пробный период на 14 дней</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subscriptions__tabs--tab subscriptions__tab" id="tab-2">
+                        <ul class="subscriptions__list">
+                            <li class="subscriptions__tab--card subscriptions__card card">
+                                <div class="subscriptions__card--descr">
+                                    <span class="subscriptions__card--price main-title" data-currency="$" data-period="/в год">
+                                        0
+                                    </span>
+                                    <h3 class="subscriptions__card--title min-title">
+                                        Бизнес-класс
+                                    </h3>
+                                    <p class="subscriptions__card--for">
+                                        Для небольших команд или офиса
+                                    </p>
+                                </div>
+                                <ul class="subscriptions__card--list">
+                                    <li class="subscriptions__card--list-li">
+                                        Конструктор перетаскивания
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        1000 шаблонов
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Инструменты поддержки блога
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Интернет-магазин
+                                    </li>
+                                </ul>
+                                <div class="subscriptions__card--btn-body btn-body">
+                                    <a href="#" class="subscriptions__card--btn btn">
+                                        оформить подписку
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="subscriptions__tab--card subscriptions__card card">
+                                <div class="subscriptions__card--descr">
+                                    <span class="subscriptions__card--price main-title" data-currency="$" data-period="/в год">
+                                        299
+                                    </span>
+                                    <h3 class="subscriptions__card--title min-title">
+                                        Профессиональный мастер
+                                    </h3>
+                                    <p class="subscriptions__card--for">
+                                        Для лучших возможностей
+                                    </p>
+                                </div>
+                                <ul class="subscriptions__card--list">
+                                    <li class="subscriptions__card--list-li">
+                                        Конструктор перетаскивания
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        1000 шаблонов
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Инструменты поддержки блога
+                                    </li>
+                                    <li class="subscriptions__card--list-li">
+                                        Интернет-магазин
+                                    </li>
+                                </ul>
+                                <div class="subscriptions__card--btn-body btn-body">
+                                    <a href="#" class="subscriptions__card--btn btn">
+                                        оформить подписку
+                                    </a>
+                                </div>
+                                <a href="#" class="subscriptions__card--btn-link link-accent link-hover"><span>пробный период на 14 дней</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews section-padding">
+            <div class="reviews__image">
+                <div class="reviews__image--bg">
+                    <img class="reviews__image--bg-img" src="img/reviews/map.png" alt="">
+                </div>
+            </div>
+            <div class="reviews__container container flex-container">
+                <div class="reviews__info">
+                    <h2 class="reviews__title title">
+                        Удовлетворенность клиентов используя продукт
+                    </h2>
+                    <p class="reviews__text">
+                        Распространение мобильных устройств меняет способ нашего потребления. возвышенные каналы, такие как Facebook.
+                    </p>
+                </div>
+                <div class="reviews__slider swiper-container">
+                    <div class="reviews__slider--navigation">
+                        <div class="reviews__slider--btn-next slider-btn slider-btn-next">
+                            <svg class="slider-btn-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path d="M517.504 288l-194.272-194.272 45.248-45.248 271.52 271.52-271.52 271.52-45.248-45.248 194.272-194.272h-517.504v-64z"></path>
+                            </svg>
+                        </div>
+                        <div class="reviews__slider--btn-prev slider-btn slider-btn-prev">
+                            <svg class="slider-btn-icon _reverse" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path d="M517.504 288l-194.272-194.272 45.248-45.248 271.52 271.52-271.52 271.52-45.248-45.248 194.272-194.272h-517.504v-64z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="reviews__slider--wrapper swiper-wrapper">
+                        <div class="reviews__slider--item reviews__item swiper-slide">
+                            <ul class="reviews__item--rating reviews__rating" data-rating-value="5">
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                            </ul>
+                            <h3 class="reviews__item--title min-title">
+                                Удобный и настраиваемый
+                            </h3>
+                            <div class="reviews__item--text">
+                                Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, продвигаясь вперед, новый стандарт, который развился из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Пользовательский контент в реальном времени будет иметь несколько точек соприкосновения для офшоринга.
+                            </div>
+                            <div class="reviews__item--info">
+                                <div class="reviews__item--info-avatar">
+                                    <img src="img/reviews/avatar-slider-1.jpg" alt="" class="reviews__item--info-avatar-img">
+                                </div>
+                                <div class="reviews__item--info-descr">
+                                    <h4 class="reviews__item--info-name min-title">
+                                        Имя Фамилия
+                                    </h4>
+                                    <span class="reviews__item--info-specializatiom">
+                                        Генеральный директор Pixler Lab
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slider--item reviews__item swiper-slide">
+                            <ul class="reviews__item--rating reviews__rating" data-rating-value="4">
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                            </ul>
+                            <h3 class="reviews__item--title min-title">
+                                Удобный и настраиваемый
+                            </h3>
+                            <div class="reviews__item--text">
+                                Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, продвигаясь вперед, новый стандарт, который развился из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Пользовательский контент в реальном времени будет иметь несколько точек соприкосновения для офшоринга.
+                            </div>
+                            <div class="reviews__item--info">
+                                <div class="reviews__item--info-avatar">
+                                    <img src="img/reviews/avatar-slider-1.jpg" alt="" class="reviews__item--info-avatar-img">
+                                </div>
+                                <div class="reviews__item--info-descr">
+                                    <h4 class="reviews__item--info-name min-title">
+                                        Имя Фамилия
+                                    </h4>
+                                    <span class="reviews__item--info-specializatiom">
+                                        Генеральный директор Pixler Lab
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slider--item reviews__item swiper-slide">
+                            <ul class="reviews__item--rating reviews__rating" data-rating-value="5">
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                                <li class="reviews__rating--item">
+                                    <img src="img/reviews/star-svgrepo-com.svg" loading="lazy" alt="" class="reviews__rating--item-icon">
+                                </li>
+                            </ul>
+                            <h3 class="reviews__item--title min-title">
+                                Удобный и настраиваемый
+                            </h3>
+                            <div class="reviews__item--text">
+                                Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, продвигаясь вперед, новый стандарт, который развился из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Пользовательский контент в реальном времени будет иметь несколько точек соприкосновения для офшоринга.
+                            </div>
+                            <div class="reviews__item--info">
+                                <div class="reviews__item--info-avatar">
+                                    <img src="img/reviews/avatar-slider-1.jpg" alt="" class="reviews__item--info-avatar-img">
+                                </div>
+                                <div class="reviews__item--info-descr">
+                                    <h4 class="reviews__item--info-name min-title">
+                                        Имя Фамилия
+                                    </h4>
+                                    <span class="reviews__item--info-specializatiom">
+                                        Генеральный директор Pixler Lab
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq section-padding">
+            <div class="faq__container container">
+                <div class="faq__info _info-center">
+                    <h2 class="faq__title title">
+                        Часто задаваемые вопросы
+                    </h2>
+                    <p class="faq__text">
+                        Рост мобильных устройств полностью меняет способ потребления информации и самые популярные каналы мира, такие как Facebook.
+                    </p>
+                </div>
+                <ul class="faq__list">
+                    <li class="faq__li">
+                        <div class="faq__li--wrapper">
+                            <h3 class="faq__question min-title">
+                                Как связаться в экстренных случаях?
+                            </h3>
+                            <div class="faq__answear">
+                                <p>
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__li">
+                        <div class="faq__li--wrapper">
+                            <h3 class="faq__question min-title">
+                                Как связаться в экстренных случаях?
+                            </h3>
+                            <div class="faq__answear">
+                                <p>
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__li">
+                        <div class="faq__li--wrapper">
+                            <h3 class="faq__question min-title">
+                                Как связаться в экстренных случаях?
+                            </h3>
+                            <div class="faq__answear">
+                                <p>
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__li">
+                        <h3 class="faq__question min-title">
+                            Как связаться в экстренных случаях?
+                        </h3>
+                        <div class="faq__answear">
+                            <p>
+                                Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__li">
+                        <div class="faq__li--wrapper">
+                            <h3 class="faq__question min-title">
+                                Как связаться в экстренных случаях?
+                            </h3>
+                            <div class="faq__answear">
+                                <p>
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="app section-padding">
+            <div class="app__container container flex-container _column">
+                <div class="app__content">
+                    <h2 class="app__title title">
+                        Скачайте наше приложения!
+                    </h2>
+                    <p class="app__text">
+                        Рост мобильных устройств полностью меняет способ потребления информации и самые популярные каналы мира, такие как Facebook.
+                    </p>
+                    <div class="app__links">
+                        <a href="#" class="app__links--link app__link" aria-label="Ссылка на скачевание для android">
+                            <img src="img/download/google-play.svg" loading="lazy" alt="" class="app__link--img">
+                        </a>
+                        <a href="#" class="app__links--link app__link" aria-label="Ссылка на скачевание для IOS">
+                            <img src="img/download/app-store.svg" loading="lazy" alt="" class="app__link--img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="app__image">
+                <img src="img/download/download-image.svg" loading="lazy" alt="" class="app__image--img">
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container container flex-container ">
+                <a href="/" class="footer__logo-link logo-link" aria-label="Логотип">
+                    <img src="img/logo-white.svg" loading="lazy" alt="Логотип" class="footer__logo-img logo-img">
+                </a>
+                <nav class="footer__nav">
+                    <ul class="footer__nav--list">
+                        <li>
+                            <a href="#" class="footer__nav--link btn-scroll"><span>Основные функции</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__nav--link btn-scroll"><span>Цены</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__nav--link btn-scroll"><span>Отзывы</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__nav--link btn-scroll"><span>FAQ</span></a>
+                        </li>
+                    </ul>
+                    <ul class="footer__nav--list">
+                        <li>
+                            <a href="#" class="footer__nav--social-link" aria-label="Ссылка на наш Facebook">
+                                <svg class="footer__nav--social-link-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512">
+                                    <title>Facebook</title>
+                                    <path d="M304 96h80v-96h-80c-61.757 0-112 50.243-112 112v48h-64v96h64v256h96v-256h80l16-96h-96v-48c0-8.673 7.327-16 16-16z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__nav--social-link" aria-label="Ссылка на наш Twitter">
+                                <svg class="footer__nav--social-link-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512">
+                                    <title>Twitter</title>
+                                    <path d="M512 113.2c-18.8 8.4-39.1 14-60.3 16.5 21.7-13 38.3-33.6 46.2-58.1-20.3 12-42.8 20.8-66.7 25.5-19.2-20.4-46.5-33.1-76.7-33.1-58 0-105 47-105 105 0 8.2 0.9 16.2 2.7 23.9-87.3-4.4-164.7-46.2-216.5-109.8-9 15.5-14.2 33.6-14.2 52.8 0 36.4 18.5 68.6 46.7 87.4-17.2-0.5-33.4-5.3-47.6-13.1 0 0.4 0 0.9 0 1.3 0 50.9 36.2 93.4 84.3 103-8.8 2.4-18.1 3.7-27.7 3.7-6.8 0-13.3-0.7-19.8-1.9 13.4 41.7 52.2 72.1 98.1 73-36 28.2-81.2 45-130.5 45-8.5 0-16.8-0.5-25.1-1.5 46.6 29.9 101.8 47.2 161.1 47.2 193.2 0 298.9-160.1 298.9-298.9 0-4.6-0.1-9.1-0.3-13.6 20.5-14.7 38.3-33.2 52.4-54.3z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__nav--social-link" aria-label="Ссылка на наш Youtube канал">
+                                <svg class="footer__nav--social-link-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512">
+                                    <title>YouTube</title>
+                                    <path d="M506.9 153.6c0 0-5-35.3-20.4-50.8-19.5-20.4-41.3-20.5-51.3-21.7-71.6-5.2-179.1-5.2-179.1-5.2h-0.2c0 0-107.5 0-179.1 5.2-10 1.2-31.8 1.3-51.3 21.7-15.4 15.5-20.3 50.8-20.3 50.8s-5.1 41.4-5.1 82.9v38.8c0 41.4 5.1 82.9 5.1 82.9s5 35.3 20.3 50.8c19.5 20.4 45.1 19.7 56.5 21.9 41 3.9 174.1 5.1 174.1 5.1s107.6-0.2 179.2-5.3c10-1.2 31.8-1.3 51.3-21.7 15.4-15.5 20.4-50.8 20.4-50.8s5.1-41.4 5.1-82.9v-38.8c-0.1-41.4-5.2-82.9-5.2-82.9zM203.1 322.4v-143.9l138.3 72.2-138.3 71.7z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__nav--social-link" aria-label="Ссылка на наш GitHub">
+                                <svg class="footer__nav--social-link-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512">
+                                    <title>GitHub</title>
+                                    <path d="M256.004 6.321c-141.369 0-256.004 114.609-256.004 255.999 0 113.107 73.352 209.066 175.068 242.918 12.793 2.369 17.496-5.555 17.496-12.316 0-6.102-0.24-26.271-0.348-47.662-71.224 15.488-86.252-30.205-86.252-30.205-11.641-29.588-28.424-37.458-28.424-37.458-23.226-15.889 1.755-15.562 1.755-15.562 25.7 1.805 39.238 26.383 39.238 26.383 22.836 39.135 59.888 27.82 74.502 21.279 2.294-16.543 8.926-27.84 16.253-34.232-56.865-6.471-116.638-28.425-116.638-126.516 0-27.949 10.002-50.787 26.38-68.714-2.658-6.45-11.427-32.486 2.476-67.75 0 0 21.503-6.876 70.42 26.245 20.418-5.674 42.318-8.518 64.077-8.617 21.751 0.099 43.668 2.943 64.128 8.617 48.867-33.122 70.328-26.245 70.328-26.245 13.936 35.264 5.175 61.3 2.518 67.75 16.41 17.928 26.347 40.766 26.347 68.714 0 98.327-59.889 119.975-116.895 126.312 9.182 7.945 17.362 23.523 17.362 47.406 0 34.254-0.298 61.822-0.298 70.254 0 6.814 4.611 14.797 17.586 12.283 101.661-33.888 174.921-129.813 174.921-242.884 0-141.39-114.617-255.999-255.996-255.999z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__copy">
+                    <h3 class="footer__copy--text">
+                        Copyright© Arifur Rahman Tushar 2019. Все права защищены
+                    </h3>
+                </div>
+            </div>
+        </footer>
+    </div>
     
+    <!-- <div class="block" style="width: 100%; height: 2000px;"></div> -->
     
     <script src="js/main.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- <script src="js/swiper.js"></script> -->
 </body>
 </html>

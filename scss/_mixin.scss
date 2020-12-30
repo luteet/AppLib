@@ -1,8 +1,14 @@
-/* @mixin _1196 {
-    @media (min-width: 1196px) {
+
+$maxWidth: 1200;
+
+
+
+
+@mixin _maxWidth {
+    @media (min-width: $maxWidth+px) {
         @content;
     }
-} */
+}
 @mixin _1196 {
     @media (min-width: 1196px) {
         @content;
@@ -24,7 +30,7 @@
     }
 }
 
-$maxWidth: 1650;
+
 
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
@@ -40,6 +46,27 @@ $maxWidth: 1650;
 @mixin adaptiv-p($minPValue, $maxPValue) {
     padding: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320))
 }
+@mixin adaptiv-ptb($minPValue, $maxPValue) {
+    padding: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320)) 0
+}
+@mixin adaptiv-plr($minPValue, $maxPValue) {
+    padding: 0 calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320))
+}
+@mixin adaptiv-pb($minPValue, $maxPValue) {
+    padding: 0 0 calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320)) 0
+}
 @mixin adaptiv-m($minPValue, $maxPValue) {
     margin: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320))
+}
+@mixin adaptiv-mb($minPValue, $maxPValue) {
+    margin: 0 0 calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320)) 0
+}
+@mixin adaptiv-mt($minPValue, $maxPValue) {
+    margin: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320)) 0 0 0
+}
+@mixin adaptiv-mtb($minPValue, $maxPValue) {
+    margin: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320)) 0
+}
+@mixin adaptiv-mlr($minPValue, $maxPValue) {
+    margin: 0 calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320))
 }

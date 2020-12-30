@@ -1,0 +1,52 @@
+
+$accent: #2500f9;
+$accentTitle: #242f51;
+$red: #f55767;
+
+$blue: #2563ff;
+$blueGray: #eff3f8;
+$blueBg: #f5f7fa;
+$blueDark: #09142e;
+
+$green: #40975f;
+$gray: #616368;
+$gray-white: #fbfcfd;
+$gray-white2: #ebebeb;
+$gray-text: #999ca5;
+
+$gradientAccent: linear-gradient(0deg, rgba(32,0,214,1) 0%, rgba(39,101,255,1) 100%);
+
+
+
+$white: #FFFFFF;
+$black: #000000;
+
+@font-face {
+    font-weight: 900;
+    font-family: "Roboto";
+    font-display: swap;
+    font-style: normal;
+    src: url(Roboto-Black.woff), url(Roboto-Black.woff2), 
+}
+@font-face {
+    font-weight: 700;
+    font-family: "Roboto";
+    font-display: swap;
+    font-style: normal;
+    src: url(Roboto-Bold.woff), url(Roboto-Bold.woff2), 
+}
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto-Medium.woff), url(Roboto-Medium.woff2), 
+}
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto-Regular.woff), url(Roboto-Regular.woff2), 
+}
+
