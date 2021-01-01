@@ -313,11 +313,12 @@ $(function () {
                 x = $(e).offset().left - $(e).parent().offset().left, w = $(e).width() + 30, h = $(tabButtons).height();
                 $('.subscriptions__tabs--btn-bg').css('left', `${x}px`).css('width', `${w}px`).css('height', `${h}px`);
             })
-
+            $(tab).parent().css('min-height', $(tab).parent().height() + 'px')
             $(tab).fadeOut(200);
 
             setTimeout(function () {
                 $($(e).attr('href')).fadeIn(200);
+                $(tab).parent().css('min-height', '0px')
             }, 200)
 
         }
