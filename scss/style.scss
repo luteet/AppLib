@@ -455,12 +455,13 @@
         display: inline-block;
     }
     &__link-body {
-        margin: 25px 0 0 0;
+        
         display: flex;
         justify-content: center;
         @include _769 {
             display: inline-flex;
             justify-content: flex-start;
+            margin: 25px 0 0 0;
         }
     }
 }
