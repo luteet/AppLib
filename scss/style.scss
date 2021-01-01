@@ -12,12 +12,14 @@
     width: 100%;
     z-index: 100;
     background-color: $white;
-    transition: all .1s ease;
+    transition: transform .3s ease-in-out, margin 0.1s linear;
     @media(max-width: 992px) {
         padding-top: 5px !important;
         margin: 0 !important;
     }
-
+    &.hide {
+        transform: translateY(-100%);
+    }
     &.top::before {
         background-color: transparent;
     }
@@ -31,6 +33,8 @@
         justify-content: space-between;
     }
     &__logo {
+        position: relative;
+        z-index: 100;
         margin: 5px 0 0 -10px;
         @include _992 {
             margin: 5px 0 0 -5px;
@@ -98,9 +102,16 @@
                     margin: 0 0 auto 0;
                     width: auto;
                     min-width: calc(100% - 100px);
+                    
                     @include _992 {
                         margin: 0 0 0 25px;
                         min-width: 0;
+                        
+                    }
+                    & .btn {
+                        @media (max-width: 992px) {
+                            padding: 20px 15px !important;
+                        }
                     }
                 }
             }
@@ -134,24 +145,18 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
-        /* background: url(../img/intro/bg-city.png) center bottom / 1000px no-repeat;
-        @include _992 {
-            background: url(../img/intro/bg-city.png) left bottom / 100% no-repeat;
-        } */
-        z-index: -1;
-        //background-color: $black;
-    }
     &__bg {
-        position: absolute;
-        left: 0; bottom: 0;
-        z-index: -1;
-        &--img {
-            width: 100%;
+        display: none;
+        @include _769 {
+            display: block;
+            position: absolute;
+            left: 0; bottom: 0;
+            z-index: -1;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 1s 1 normal forwards;
+            &--img {
+                width: 100%;
+            }
         }
     }
     @media(max-width: 769px) {
@@ -162,10 +167,13 @@
     }
     &__scene {
         z-index: -1;
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out 1s 1 normal forwards;
     }
     &__container {
         width: 100%;
     }
+    &
     &__content {
         flex: 0 1 100%;
         @include _769 {
@@ -205,6 +213,8 @@
     &__image {
         display: none;
         @include _769 {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 1s 1 normal forwards;
             display: block;
             flex: 0 1 35%;
         }
@@ -255,22 +265,61 @@
 }
 
 .awesome {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    min-height: 55vw;
+    @media(min-width: 1920px) {
+        min-width: 1000px;
+    }
+    
+    /* &__image {
+        display: none;
+        @include _992 {
+            display: block;
+            position: absolute;
+            right: 0; top: 50%;
+            transform: translate(0%, -50%);
+            width: 72vw; height: 100%;
+            &--img {
+                position: absolute;
+                width: 100%;
+            }
+        }
+        @media(min-width: 1920px) {
+            
+            right: 50%;
+            transform: translate(70%, -50%);
+            width: 1920 / 1.2 + px;
+        }
+    } */
     &__image {
         display: none;
+        @media(min-width: 1920px) {
+            width: 870px;
+        }
         @include _769 {
-            position: relative;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-100%, -50%);
             margin: 0 25px 0 0;
             display: block;
+            width: 45vw; height: 100%;
             &--bg {
+                position: absolute;
+                left: 0; top: 50%;
+                transform: translateY(-50%);
                 width: 100%;
+                //transform: translateY(10%);
                 &-img {
                     width: 100%;
                 }
             }
             &--item {
                 position: absolute;
-                left: 50%; top: 0;
-                transform: rotate(-15deg) translate(-50%, -20%);
+                left: 50%; top: 50%;
+                transform: rotate(-15deg) translate(-25%, -50%);
                 width: 100%;
                 max-width: 60%;
                 &-img {
@@ -279,6 +328,11 @@
             }
         }
         
+    }
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
     &__content {
         flex: 1 1 100%;
@@ -330,10 +384,10 @@
     }
     &__title {
         flex: 0 1 100%;
-        @include adaptiv-mb(15, 15);
+        //@include adaptiv-mb(15, 15);
         @include _769 {
             flex: 0 1 50%;
-            margin: 0;
+            //margin: 0;
         }
     }
     &__text {
@@ -396,18 +450,12 @@
     }
     &__content {
         margin: -15px 0;
-        
-        & * {
-            @include _maxWidth {
-                margin: 15px 0;
-            }
-            @include adaptiv-mtb(5, 5)
-        }
     }
     &__text {
         display: inline-block;
     }
     &__link-body {
+        margin: 25px 0 0 0;
         display: flex;
         justify-content: center;
         @include _769 {
@@ -425,7 +473,7 @@
     &__list {
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0px -15px !important;
+        margin: 15px -15px 0 -15px !important;
         @include _992 {
             margin: 0px -30px -20px -30px !important;
         }
@@ -706,9 +754,7 @@
             max-width: 50%;
         }
     }
-    &__info * {
-        margin: 0 0 20px 0;
-    }
+    
     &__item {
         &--info {
             display: flex;
@@ -728,7 +774,7 @@
         //min-width: 0;
         //overflow: hidden;
         position: relative;
-        margin: 0;
+        margin: 15px 0 0 0;
         padding: 0 0 60px 0;
         @include _992 {
             padding: 0;
@@ -798,12 +844,36 @@
         margin: 35px 0 -5px 0;
     }
     &__li {
+        position: relative;
         cursor: pointer;
         margin: 10px 0;
+        border: 2px solid transparent;
         @include adaptiv-p(15, 15);
         background-color: $blueBg;
         @include _769 {
             padding: 20px 40px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            transform: translate(-5px, -5px);
+
+            width: calc(100% + 10px); height: calc(100% + 10px);
+
+            background: $gradientAccent;
+            z-index: -1;
+
+            opacity: 0;
+            transition: all .2s ease-in-out;
+        }
+        &:hover::before {
+            @include _992 {
+                opacity: 1;
+            }
+        }
+        &.active::before {
+            opacity: 0 !important;
         }
     }
     &__question {
@@ -880,24 +950,25 @@
         position: relative;
         z-index: 2;
         justify-content: flex-start;
+        width: 100%;
     }
     &__content {
         max-width: 100%;
-        margin: -15px 0;
+        margin: -10px 0;
         @include _992 {
             max-width: 50%;
         }
-        & > * {
+        /* & > * {
             margin: 15px 0;
-        }
+        } */
     }
     &__links {
-        margin: -1vw;
+        margin: 10px -1vw -1vw -1vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         @include _maxWidth {
-            margin: -16px;
+            margin: 10px -16px -16px -16px;
         }
         @include _769 {
             display: block;

@@ -28,6 +28,86 @@ $(function () {
         }
     }
     mediaEvents();
+
+
+    $('.btn-to-top').on('click', function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1500);
+    })
+    var start_scroll = false, headerHeight = $('.header').height();
+
+    $('.btn-scroll').on('click', function (e) {
+        e.preventDefault();
+        $('.burger, .header__nav').removeClass('active');
+        $('body').removeClass('lock').css('margin-right', '0px');
+        if (start_scroll == false) {
+            start_scroll = true;
+
+            let scrollName = $(this).attr('href'), scrollElem = $(scrollName), scrollTop = scrollElem.offset().top;
+            let timeOutSeconds; 
+            headerHeight = $('.header').height()
+    
+          /* if ($('.header').offset().top > scrollTop + 300) {
+            scrollTop = scrollTop - $('.header').height() - 10;
+          }
+          else if ($('.header').offset().top < scrollTop && scrollTop - $('.header').offset().top <= 300) {
+            scrollTop = scrollTop - $('.header').height() - 10;
+    
+          } */
+          headerPositionTop = $('.header').offset().top;
+          //scrollElemPosititonTop = $(scrollElem).offset().top;
+          //var headerScrollElem = headerPositionTop - scrollElemPosititonTop, scrollElemHeader = $(scrollElem).offset().top - $('.header').offset().top;
+
+          if ($(this).hasClass('btn-scroll-last')) {
+            scrollTop = $(document).height() - $(window).height() + headerHeight;
+          }
+          if(headerPositionTop <= scrollTop) {
+              if((scrollTop - headerPositionTop) >= 250) {
+                  console.log(scrollTop - headerPositionTop)
+                $('html, body').animate({
+                    scrollTop: scrollTop
+                  }, 1500);
+              }
+          }
+          else {
+            $('html, body').animate({
+                scrollTop: scrollTop - headerHeight
+              }, 1500);
+          }
+          
+          /* $('html, body').animate({
+            scrollTop: scrollTop
+          }, $('.header').offset().top / $(scrollElem).height() * 200); */
+    
+          
+    
+          /* $('.header__burger, .header__nav--menu').removeClass('active');
+          $('body').removeClass('lock'); */
+    
+    
+    
+    
+          /* if ($('.header').offset().top > scrollTop && $('.header').offset().top - scrollTop <= 300) {
+            $('html, body').animate({
+              scrollTop: scrollTop
+            }, 1000);
+          }
+          else {
+            $('html, body').animate({
+              scrollTop: scrollTop
+            }, 1500);
+          } */
+    
+          setTimeout(function () {
+            start_scroll = false;
+          }, timeOutSeconds);
+        }
+      });
+
+
+
+
     function hHeader(settings) {
 
         let header = settings.elemName,
@@ -87,6 +167,7 @@ $(function () {
 
         $(window).resize(function () {
             mediaEvents();
+            headerHeight = $('.header').height();
             widthWindow = $(window).width();
             if ($(this).width() < 1920) {
                 windowSize = $(window).width();
@@ -96,11 +177,9 @@ $(function () {
             }
         });
         function btnToTop() {
-            if (scrolled > 150) {
-                $('.btn-to-top').removeClass('_none');
-            }
-            else {
-                $('.btn-to-top').addClass('_none');
+            if (scrolled < 150) {
+                console.log('top')
+                $('.btn-to-top').addClass('hide');
             }
         }
         btnToTop();
@@ -146,16 +225,36 @@ $(function () {
             scrollPrev = scrolled;
             if (scrolled >= scrollDown && scrollDownCheck == false) {
                 // hide elem
-                //$(header).addClass(settings.classToHide);
+                $(header).addClass(settings.classToHide);
                 $('.btn-to-top').addClass(settings.classToHide);
                 scrollDownCheck = true;
             }
             if (scrollTop >= scrolled && scrollTopCheck == false) {
                 // show elem
-                //$(header).removeClass(settings.classToHide);
+                $(header).removeClass(settings.classToHide);
                 $('.btn-to-top').removeClass(settings.classToHide);
                 scrollTopCheck = true;
             }
+            
+            if (scrolled >= ($('.wrapper').height() - 100 - $(window).height())) {
+                
+                $('.btn-to-top').removeClass(settings.classToHide);
+            }   
+
+            let activeHeaderOnMouse = false;
+            $('body').on('mousemove', function(e) {
+                
+                if(e.clientY <= (headerHeight + 15) && $('.header').hasClass('hide') && activeHeaderOnMouse == false) {
+                    activeHeaderOnMouse = true;
+                    $(header).removeClass(settings.classToHide);
+                }
+                else if(e.clientY > (headerHeight + 15) && !$('.header').hasClass('hide') && activeHeaderOnMouse == true) {
+                    activeHeaderOnMouse = false;
+                    $(header).addClass(settings.classToHide);
+                }
+
+            })
+
         });
         setTimeout(function () {
             $(header).fadeIn(200)
@@ -166,7 +265,7 @@ $(function () {
     hHeader({
         elemName: $('.header'),
         classToHide: 'hide',
-        distanceHide: 100,
+        distanceHide: 200,
         distanceShow: 100,
         ifHeaderTop: ['top', 150],
         classAnchorForTop: true
@@ -217,11 +316,9 @@ $(function () {
 
     hoverPerspective('.btn', $(".btn-body"));
 
-
-    $('.burger').on('click', function () {
-        $('.burger, .header__nav').toggleClass('active');
-
-
+    let burger = $('.burger'), headerNav = $('.header__nav'), burgerAndHeaderNav = $('.burger, .header__nav');
+    burger.on('click', function () {
+        burgerAndHeaderNav.toggleClass('active');
         $('body').toggleClass('lock');
     });
 
@@ -262,7 +359,7 @@ $(function () {
     btnTab[0].click()
 
 
-
+    
 
 
     /* if (widthWindow > 769) {
@@ -293,15 +390,20 @@ $(function () {
             
         if (!$(this).find('.faq__question').hasClass('active')) {
             $('.faq__question.active').removeClass('active').next('.faq__answear').slideUp(500);
-            $(this).find('.faq__question').addClass('active').next('.faq__answear').slideDown(500);
+            faqLi.removeClass('active')
+            $(this).addClass('active').find('.faq__question').addClass('active').next('.faq__answear').slideDown(500);
         }
         else if ($(this).find('.faq__question').hasClass('active')) {
-            $(this).find('.faq__question').removeClass('active').next('.faq__answear').slideUp(500);
+            
+            $(this).removeClass('active').find('.faq__question').removeClass('active').next('.faq__answear').slideUp(500);
         }
 
     });
 
     $(faqLi[0]).click();
+
+
+    new WOW().init();
 
 });
 

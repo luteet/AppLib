@@ -35,6 +35,10 @@
 </head>
 <body>
     <div class="wrapper">
+        <button class="btn-to-top">
+            <span></span>
+            <span></span>
+        </button>
         <header class="header top">
             <div class="header__container container">
                 <div class="header__logo logo">
@@ -50,16 +54,16 @@
                 <nav class="header__nav">
                     <ul class="header__nav--list">
                         <li>
-                            <a href="#" class="header__nav--link link-hover btn-scroll">Основные функции</a>
+                            <a href="#awesome" class="header__nav--link link-hover btn-scroll">Основные функции</a>
                         </li>
                         <li>
-                            <a href="#" class="header__nav--link link-hover btn-scroll">Цены</a>
+                            <a href="#subscriptions" class="header__nav--link link-hover btn-scroll">Цены</a>
                         </li>
                         <li>
-                            <a href="#" class="header__nav--link link-hover btn-scroll">Отзывы</a>
+                            <a href="#reviews" class="header__nav--link link-hover btn-scroll">Отзывы</a>
                         </li>
                         <li>
-                            <a href="#" class="header__nav--link link-hover btn-scroll">FAQ</a>
+                            <a href="#faq" class="header__nav--link link-hover btn-scroll">FAQ</a>
                         </li>
                         <li class="last-li btn-body">
                             <a href="#" class="header__nav--link btn btn-scroll"><span>Попробовать</span></a>
@@ -72,7 +76,7 @@
             <div class="intro__bg">
                 <img src="img/intro/bg-city.png" loading="lazy" alt="" class="intro__bg--img">
             </div>
-            <!-- <div class="intro__scene parallax-scene">
+            <div class="intro__scene parallax-scene">
                 <div data-depth="0.15" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 25s linear 0s infinite alternate forwards">
                     <img src="img/parallax-lib/circle-big.svg" class="parallax-scene__item-img" style="width: 18px; left: 4%; top: 20%;" loading="lazy" alt="">
                 </div>
@@ -94,7 +98,7 @@
                 <div data-depth="0.05" class="intro__scene--item parallax-scene__item" style="animation: item-anim-bg 20s linear 0s infinite alternate-reverse forwards">
                     <img src="img/parallax-lib/X.svg" class="parallax-scene__item-img" style="width: 17px; left: 20%; top: 55%; transform: rotate(35deg);" loading="lazy" alt="">
                 </div>
-            </div> -->
+            </div>
             <div class="intro__container container flex-container">
                 <div class="intro__content">
                     <h1 class="intro__title main-title">
@@ -113,7 +117,7 @@
                 </div>
             </div>
         </div>
-        <section class="companies section-padding">
+        <section class="companies section-padding wow animate__fadeIn">
             <div class="companies__container container">
                 <h2 class="companies__title ">
                     Нам доверяют такие компании, как
@@ -147,21 +151,24 @@
                 </ul>
             </div>
         </section>
-        <section class="awesome section-padding">
-            <div class="awesome__container container flex-container _row-to-column">
-                <div class="awesome__image flex-block">
-                    <div class="awesome__image--bg">
-                        <img src="img/awesome/smartphone-bg.svg" loading="lazy" alt="" class="awesome__image--bg-img">
-                    </div>
-                    <div class="awesome__image--item">
-                        <img src="img/awesome/smartphone.svg" loading="lazy" alt="" class="awesome__image--item-img">
-                    </div>
+        <section class="awesome section-padding wow animate__fadeIn" id="awesome">
+            <div class="awesome__image flex-block">
+                <div class="awesome__image--bg">
+                    <img src="img/awesome/smartphone-bg.svg" loading="lazy" alt="" class="awesome__image--bg-img">
                 </div>
+                <div class="awesome__image--item">
+                    <img src="img/awesome/smartphone.svg" loading="lazy" alt="" class="awesome__image--item-img">
+                </div>
+            </div>
+            <div class="awesome__container container flex-container _row-to-column">
                 <div class="awesome__content">
-                    <h2 class="awesome__title title">
-                        Отличные приложения функции
-                    </h2>
-                    <p>Повысьте продуктивность с помощью простого приложения для дел. приложение для управление личным бюджетом.</p>
+                    <div class="awesome__info _margin-between-elements">
+                        <h2 class="awesome__title title">
+                            Отличные приложения функции
+                        </h2>
+                        <p>Повысьте продуктивность с помощью простого приложения для дел. приложение для управление личным бюджетом.</p>
+                    </div>
+
                     <ul class="awesome__list section-list _column">
                         <li class="awesome__list--item awesome__item list-item _center">
                             <div class="awesome__item--icon">
@@ -206,14 +213,16 @@
                 </div>
             </div>
         </section>
-        <section class="advantages section-padding">
+        <section class="advantages section-padding wow animate__fadeIn">
             <div class="advantages__container container">
-                <h2 class="advantages__title title">
-                    Умные джекпоты, которые ты можешь любить это в любое время в любом месте
-                </h2>
-                <p class="advantages__text">
-                    Рост мобильных устройств меняет то, как мы потребляют информацию целиком и больше всего в мире возвышенные каналы, такие как Facebook.
-                </p>
+                <div class="advantages__info _margin-between-elements">
+                    <h2 class="advantages__title title">
+                        Умные джекпоты, которые ты можешь любить это в любое время в любом месте
+                    </h2>
+                    <p class="advantages__text">
+                        Рост мобильных устройств меняет то, как мы потребляют информацию целиком и больше всего в мире возвышенные каналы, такие как Facebook.
+                    </p>
+                </div>
                 <ul class="advantages__list section-list">
                     <li class="advantages__list--item advantages__item list-item _column">
                         <div class="advantages__item--icon list-icon">
@@ -257,9 +266,9 @@
                 </ul>
             </div>
         </section>
-        <section class="designed section-padding">
+        <section class="designed section-padding wow animate__fadeIn">
             <div class="designed__container container flex-container _row-to-column">
-                <div class="designed__content flex-block">
+                <div class="designed__content flex-block _margin-between-elements">
                     <h2 class="designed__title title">
                         Разработано и построено последний код интеграция
                     </h2>
@@ -277,9 +286,9 @@
                 <img src="img/designed-built/designed-built-image.svg" loading="lazy" alt="" class="designed__image--img">
             </div>
         </section>
-        <section class="causes section-padding">
+        <section class="causes section-padding wow animate__fadeIn">
             <div class="causes__container container">
-                <div class="causes__info _info-center">
+                <div class="causes__info _info-center _margin-between-elements">
                     <h2 class="causes__title title">
                         Почему вам стоит выбрать наше приложение
                     </h2>
@@ -448,9 +457,9 @@
                 </div>
             </div>
         </section> -->
-        <section class="subscriptions section-padding">
+        <section class="subscriptions section-padding wow animate__fadeIn" id="subscriptions">
             <div class="subscriptions__container container">
-                <div class="subscriptions__info _info-center">
+                <div class="subscriptions__info _info-center _margin-between-elements">
                     <h2 class="subscriptions__title title">
                         Получите потрясающие функции без дополнительные сборы
                     </h2>
@@ -609,14 +618,14 @@
                 </div>
             </div>
         </section>
-        <section class="reviews section-padding">
+        <section class="reviews section-padding wow animate__fadeIn" id="reviews">
             <div class="reviews__image">
                 <div class="reviews__image--bg">
                     <img class="reviews__image--bg-img" src="img/reviews/map.png" alt="">
                 </div>
             </div>
             <div class="reviews__container container flex-container">
-                <div class="reviews__info">
+                <div class="reviews__info _margin-between-elements">
                     <h2 class="reviews__title title">
                         Удовлетворенность клиентов используя продукт
                     </h2>
@@ -756,9 +765,9 @@
                 </div>
             </div>
         </section>
-        <section class="faq section-padding">
+        <section class="faq section-padding wow animate__fadeIn" id="faq">
             <div class="faq__container container">
-                <div class="faq__info _info-center">
+                <div class="faq__info _info-center _margin-between-elements">
                     <h2 class="faq__title title">
                         Часто задаваемые вопросы
                     </h2>
@@ -774,7 +783,7 @@
                             </h3>
                             <div class="faq__answear">
                                 <p>
-                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров.
                                 </p>
                             </div>
                         </div>
@@ -786,7 +795,7 @@
                             </h3>
                             <div class="faq__answear">
                                 <p>
-                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров.
                                 </p>
                             </div>
                         </div>
@@ -798,7 +807,7 @@
                             </h3>
                             <div class="faq__answear">
                                 <p>
-                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров.
                                 </p>
                             </div>
                         </div>
@@ -809,7 +818,7 @@
                         </h3>
                         <div class="faq__answear">
                             <p>
-                                Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров.
                             </p>
                         </div>
                     </li>
@@ -820,7 +829,7 @@
                             </h3>
                             <div class="faq__answear">
                                 <p>
-                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров. Итерационные подходы к корпоративной стратегии способствуют совместному мышлению для продвижения общего ценностного предложения. Органично развивать целостное мировоззрение революционных инноваций за счет разнообразия рабочих мест и расширения прав и возможностей. Предлагайте беспроигрышные стратегии выживания, чтобы обеспечить активное доминирование. В конце концов, в будущем новый стандарт, который эволюционировал из поколения X, находится на взлетно-посадочной полосе, направляясь к оптимизированному облачному решению. Контент, созданный пользователями в реальном времени, будет иметь несколько точек соприкосновения для офшоринга.
+                                    Используйте гибкие среды, чтобы предоставить надежный синопсис для высокоуровневых обзоров.
                                 </p>
                             </div>
                         </div>
@@ -828,9 +837,9 @@
                 </ul>
             </div>
         </section>
-        <section class="app section-padding">
+        <section class="app section-padding wow animate__fadeIn">
             <div class="app__container container flex-container _column">
-                <div class="app__content">
+                <div class="app__content _margin-between-elements">
                     <h2 class="app__title title">
                         Скачайте наше приложения!
                     </h2>
@@ -851,7 +860,7 @@
                 <img src="img/download/download-image.svg" loading="lazy" alt="" class="app__image--img">
             </div>
         </section>
-        <footer class="footer">
+        <footer class="footer wow animate__fadeIn">
             <div class="footer__container container flex-container ">
                 <a href="/" class="footer__logo-link logo-link" aria-label="Логотип">
                     <img src="img/logo-white.svg" loading="lazy" alt="Логотип" class="footer__logo-img logo-img">
