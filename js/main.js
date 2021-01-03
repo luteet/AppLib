@@ -306,8 +306,11 @@ $(function () {
 
         }
     });
-
-    btnTab[0].click()
+    $(document).ready(function() {
+        btnTab[0].click()
+    })
+    
+    
 
 
     let faqLi = $('.faq__li');
