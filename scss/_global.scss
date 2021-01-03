@@ -17,16 +17,6 @@
     }
 }
 
-/* @keyframes item-anim-bg {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(50%, 50%);
-    }
-} */
-
 :root {
     --animate-duration: 1s;
     --animate-delay: 1s;
@@ -125,8 +115,9 @@ body {
     display: block;
     position: relative;
     z-index: 100;
-    width: 35px; height: 25px;
+    width: 35px; height: 35px;
     background-color: transparent;
+    overflow: hidden;
     @include _992 {
         display: none;
     }
@@ -135,16 +126,37 @@ body {
         left: 0;
         width: 100%; height: 2px;
         background-color: $accent;
+        transition: all .2s ease-in-out;
         &:nth-child(1) {
             top: 0;
         }
         &:nth-child(2) {
             top: 50%;
             transform: translateY(-50%);
+            z-index: -1;
         }
         &:nth-child(3) {
             top: 100%;
             transform: translateY(-100%);
+        }
+    }
+    &.active {
+        & span {
+            &:nth-child(1) {
+                top: 50%;
+                transform: translateY(-100%) rotate(45deg);
+                background-color: $white;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                height: 100%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3) {
+                top: 50%;
+                transform: translateY(-100%) rotate(-45deg);
+                background-color: $white;
+            }
         }
     }
 }
@@ -158,49 +170,11 @@ body {
 }
 
 
-.title, .main-title, .min-title {
-    line-height: 100%;
-    color: $accentTitle;
-}
-
-.title {
-    @include adaptiv-font(36, 21);
-    font-weight: 700;
-    @include _maxWidth {
-        font-size: 36px;
-    }
-}
-
-.main-title {
-    @media(min-width: $maxWidth+px) {
-        font-size: 60px;
-    }
-    @include adaptiv-font(60, 24);
-    font-weight: 900;
-}
-
-.min-title {
-    @media(min-width: $maxWidth+px) {
-        font-size: 20px;
-    }
-    @include adaptiv-font(20, 18);
-    font-weight: 700;
-    text-transform: capitalize;
-}
 
 
 
-.red-color {
-    color: $red;
-}
 
-.blue-color {
-    color: $blue;
-}
 
-.green-color {
-    color: $green;
-}
 
 
 
@@ -229,9 +203,6 @@ body {
     padding: 10px 15px !important;
     border-radius: 2em;
     background-color: transparent;
-    //overflow: hidden;
-    //transform: scale(1);
-    //transition: all .2s ease-in-out;
     &-body {
         perspective: 400px;
         display: inline-block;

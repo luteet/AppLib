@@ -1,0 +1,29 @@
+.title, .main-title, .min-title {
+    line-height: 100%;
+    color: $accentTitle;
+}
+
+.title {
+    @include adaptiv-font(36, 21);
+    font-weight: 700;
+    @include _maxWidth {
+        font-size: 36px;
+    }
+}
+
+.main-title {
+    @media(min-width: $maxWidth+px) {
+        font-size: 60px;
+    }
+    @include adaptiv-font(60, 24);
+    font-weight: 900;
+}
+
+.min-title {
+    @media(min-width: $maxWidth+px) {
+        font-size: 20px;
+    }
+    @include adaptiv-font(20, 18);
+    font-weight: 700;
+    text-transform: capitalize;
+}

@@ -2,6 +2,7 @@
 @import 'mixin.scss';
 @import 'null.scss';
 @import 'libs.scss';
+@import 'text.scss';
 @import 'global.scss';
 
 .header {
@@ -589,9 +590,7 @@
             padding: 2px 4px 2px 0px;
             position: relative;
             border-radius: 35px;
-            @include _769 {
-                
-            }
+
         }
         &--btn {
             display: inline-block;
@@ -615,7 +614,6 @@
                 z-index: -1;
             }
             &:hover {
-                
                 color: $accent;
             }
             &.active {
@@ -663,6 +661,7 @@
             }
         }
         &--descr {
+            border-radius: 25px 25px 0 0;
             width: 100%;
             //padding: 40px 30px;
             @include adaptiv-p(20, 20);
