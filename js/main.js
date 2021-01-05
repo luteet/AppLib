@@ -27,7 +27,7 @@ $(function () {
         }
         else {
             heightHeader = header.height();
-            $('.intro').css('padding', `${heightHeader}px 0`);
+            $('.intro').css('padding', `0px 0`);
             burgerAndHeaderNav.addClass('transition-0-2s');
           
         }
@@ -200,22 +200,16 @@ $(function () {
             }
             
             if (scrolled >= ($('.wrapper').height() - 100 - $(window).height())) {
-                
                 $('.btn-to-top').removeClass(settings.classToHide);
             }   
 
             let activeHeaderOnMouse = false;
             body.on('mousemove', function(e) {
-                
                 if(e.clientY <= (headerHeight + 15) && header.hasClass('hide') && activeHeaderOnMouse == false) {
                     activeHeaderOnMouse = true;
                     $(header).removeClass(settings.classToHide);
+                    scrollDownCheck = false
                 }
-                else if(e.clientY > (headerHeight + 15) && header.hasClass('hide') && activeHeaderOnMouse == true) {
-                    activeHeaderOnMouse = false;
-                    $(header).addClass(settings.classToHide);
-                }
-
             })
 
         });
@@ -234,13 +228,13 @@ $(function () {
         classAnchorForTop: true
     });
 
-    if (widthWindow > 992) {
-        heightHeader = header.height() * 1.6;
+    if (widthWindow > 991) {
+        heightHeader = (header.height() < 150) ? header.height() * 1.6 : 150;
         $('.intro').css('padding', `${heightHeader}px 0`);
     }
     else {
-        heightHeader = header.height();
-        $('.intro').css('padding', `${heightHeader}px 0`);
+        heightHeader = (header.height() < 150) ? header.height() * 1.6 : 150;
+        $('.intro').css('padding', `0px 0`);
     }
 
     function hoverPerspective(elem, elemBody) {

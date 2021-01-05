@@ -67,6 +67,7 @@ body {
     font-weight: 500;
     line-height: 165%;
     color: $gray;
+    
     @include adaptiv-font(16, 14);
     &.lock {
         overflow: hidden;

@@ -789,38 +789,29 @@
             display: flex;
             min-width: 0;
         }
-        &--item {
-            
-        }
     }
     &__rating {
         display: flex;
         margin: 0 -3px;
-        &--item {
-            margin: 0 3px;
-            &-icon {
-                width: 21px;
-            }
+        &::before {
+            //content: '★';
+            font-size: 35px;
+            color: orange;
         }
-        &[data-rating-value="1"] {
-            & li:nth-child(-n + 4) {
-                display: none;
-            }
+        &[data-rating-value="1"]::before {
+            content: '★';
         }
-        &[data-rating-value="2"] {
-            & li:nth-child(-n + 3) {
-                display: none;
-            }
+        &[data-rating-value="2"]::before {
+            content: '★★';
         }
-        &[data-rating-value="3"] {
-            & li:nth-child(-n + 2) {
-                display: none;
-            }
+        &[data-rating-value="3"]::before {
+            content: '★★★';
         }
-        &[data-rating-value="4"] {
-            & li:nth-child(-n + 1) {
-                display: none;
-            }
+        &[data-rating-value="4"]::before {
+            content: '★★★★';
+        }
+        &[data-rating-value="5"]::before {
+            content: '★★★★★';
         }
     }
     &__item {
