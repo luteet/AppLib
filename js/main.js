@@ -307,18 +307,27 @@ $(function () {
     
 
 
-    let faqLi = $('.faq__li');
+    let faqLi = $('.faq__li'), startFaqLiFunc = false;
     $(faqLi).on('click', function () {
-            
-        if (!$(this).find('.faq__question').hasClass('active')) {
-            $('.faq__question.active').removeClass('active').next('.faq__answear').slideUp(500);
-            faqLi.removeClass('active')
-            $(this).addClass('active').find('.faq__question').addClass('active').next('.faq__answear').slideDown(500);
+        if(startFaqLiFunc == false) {
+            startFaqLiFunc = true;
+            if (!$(this).find('.faq__question').hasClass('active')) {
+                $('.faq__question.active').removeClass('active').next('.faq__answear').slideUp(500);
+                faqLi.removeClass('active')
+                $(this).addClass('active').find('.faq__question').addClass('active').next('.faq__answear').slideDown(500);
+                setTimeout(function() {
+                    startFaqLiFunc = false;
+                }, 500)
+                
+            }
+            else if ($(this).find('.faq__question').hasClass('active')) {
+                $(this).removeClass('active').find('.faq__question').removeClass('active').next('.faq__answear').slideUp(500);
+                setTimeout(function() {
+                    startFaqLiFunc = false;
+                }, 500)
+            }
         }
-        else if ($(this).find('.faq__question').hasClass('active')) {
-            
-            $(this).removeClass('active').find('.faq__question').removeClass('active').next('.faq__answear').slideUp(500);
-        }
+        
 
     });
 
