@@ -50,7 +50,7 @@ $(function () {
         if (start_scroll == false) {
             start_scroll = true;
 
-            let scrollName = $(this).attr('href'), scrollElem = $(scrollName), scrollTop = scrollElem.offset().top;
+        let scrollName = $(this).attr('href'), scrollElem = $(scrollName), scrollTop = scrollElem.offset().top;
             headerHeight = header.height();
     
           headerPositionTop = header.offset().top;
@@ -58,6 +58,7 @@ $(function () {
           if ($(this).hasClass('btn-scroll-last')) {
             scrollTop = $(document).height() - $(window).height() + headerHeight;
           }
+
           if(headerPositionTop <= scrollTop) {
               if((scrollTop - headerPositionTop) >= 250) {
                   HtmlBody.animate({
@@ -71,15 +72,11 @@ $(function () {
               }, 1500);
           }
 
-    
           setTimeout(function () {
             start_scroll = false;
           }, 1500);
         }
       });
-
-
-
 
     function hHeader(settings) {
 
@@ -97,10 +94,10 @@ $(function () {
             scrollToDown = false;
 
 
-        scrollDown = distanceHide;
+            scrollDown = distanceHide;
 
-        ifHeaderTopClass = settings.ifHeaderTop[0];
-        ifHeaderTopDistance = settings.ifHeaderTop[1];
+            ifHeaderTopClass = settings.ifHeaderTop[0];
+            ifHeaderTopDistance = settings.ifHeaderTop[1];
 
 
         function ifHeaderTop() {
@@ -208,7 +205,9 @@ $(function () {
                 if(e.clientY <= (headerHeight + 15) && header.hasClass('hide') && activeHeaderOnMouse == false) {
                     activeHeaderOnMouse = true;
                     $(header).removeClass(settings.classToHide);
-                    scrollDownCheck = false
+                    scrollDown = scrolled + distanceHide;
+                    scrollDownCheck = false;
+                    
                 }
             })
 
@@ -241,27 +240,28 @@ $(function () {
         if (widthWindow > 992) {
             var card = elemBody;
             card.on('mousemove', function (e) {
+
                 var x = e.clientX - $(this).offset().left + $(window).scrollLeft(),
                     y = e.clientY - $(this).offset().top + $(window).scrollTop(),
 
                     rY = map(x, 0, $(this).width(), -17, 17),
                     rX = map(y, 0, $(this).height(), -17, 17);
 
-                $(this).children(elem).css("transform", "rotateY(" + rY + "deg)" + " " + "rotateX(" + -rX + "deg)");
+                $(this).children(elem).css('transform', `rotateY(${rY}deg) rotateX(${-rX}deg)`);
             });
 
             card.on('mouseenter', function () {
                 $(this).children(elem).css({
-                    transition: "all " + 0.05 + "s" + " linear",
+                    transition: `all 0.05s linear`,
                 });
             });
 
             card.on('mouseleave', function () {
                 $(this).children(elem).css({
-                    transition: "all " + 0.2 + "s" + " linear",
+                    transition: `all 0.2s linear`,
                 });
 
-                $(this).children(elem).css("transform", "rotateY(" + 0 + "deg)" + " " + "rotateX(" + 0 + "deg)");
+                $(this).children(elem).css('transform', `rotateY(0deg) rotateX(0deg)`);
             });
 
             function map(x, in_min, in_max, out_min, out_max) {
